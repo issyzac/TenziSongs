@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/grid_number"
+        android:layout_centerInParent="true"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:background="@drawable/white_number"
+        android:textColor="#ffffff"
+        android:text="15"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/song_hint"
+        android:layout_below="@id/grid_number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:maxWidth="70dp"
+        android:minWidth="60dp"
+        android:maxLines="1"
+        android:text="Chakutumaini sina"
+        android:textSize="10sp"
+        android:textColor="#006600"
+        android:ellipsize="end" />
+
+</RelativeLayout>

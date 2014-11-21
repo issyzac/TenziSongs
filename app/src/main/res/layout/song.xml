@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:divider="#ffffff"
+        android:id="@+id/song_lyrics_list"
+        android:paddingBottom="16dp"
+        android:scrollbars="none">
+
+        </ListView>

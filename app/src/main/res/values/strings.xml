@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tenzi</string>
+
+    <string name="_15_1">
+        Chakutumaini sina \n ila damu yake Bwana,\n Sina wema wa kutosha \n Dhambi zangu kuziosha;\n\n
+    </string>
+    <string name="_15_c">
+        Kwake Yesu nasimama \nNdiye Mwamba: ni\nsalama\nNdiye Mwamba: ni\nsalama\n\n
+    </string>
+    <string name="_15_2">
+         Njia yangu iwe ndefu\nYeye hunipa wokovu;\nMawimbi yakinipiga\nNguvi zake ndio nanga.\n\n
+    </string>
+     <string name="_15_3">
+         Damu yake na sadaka\nNategemea daima,\nYote chini yakiisha\nMwokozi atanitosha.\n\n
+    </string>
+     <string name="_15_4">
+        Nikiitwa hukumuni,\nRohoni nina amani;\nNikivikwa haki yake\nSina hofu mbele zake
+    </string>
+</resources>

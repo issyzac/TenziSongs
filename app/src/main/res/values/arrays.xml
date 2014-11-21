@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="titoes">
+        <item>Mwokozi Umeokoa</item>
+        <item>Twamsifu Mungu</item>
+        <item>Hata Ndimi Elfu</item>
+        <item>Jina la Yesu, Salamu!</item>
+        <item>jina lake Yesu tamu</item>
+        <item>Baba, Mwana, Roho</item>
+        <item>Ni tabibu wa karibu</item>
+        <item>Taji Mvikeni</item>
+        <item>Yesu kwetu ni rafiki</item>
+        <item>Usinipite</item>
+        <item>Nina haja nawe</item>
+        <item>Ewe roho wa mbinguni</item>
+        <item>Tafuta daima utakatifu</item>
+        <item>Yesu kwa imani</item>
+        <item>Cha kutumaini sina</item>
+        <item>Kumtegemea mwokozi</item>
+        <item>Namwandama Bwana</item>
+        <item>Akifa Yesu nikafa naye</item>
+        <item>Ndiyo dhamana, Yesu wangu</item>
+        <item>Ninaye rafiki naye</item>
+    </string-array>
+
+
+</resources>
