@@ -6,7 +6,7 @@
         android:background="#ffffff"
         android:divider="#ffffff"
         android:id="@+id/song_lyrics_list"
-        android:paddingBottom="16dp"
+        android:paddingBottom="1dp"
         android:scrollbars="none">
 
         </ListView>

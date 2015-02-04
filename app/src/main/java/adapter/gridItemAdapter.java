@@ -1,14 +1,19 @@
 package adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.wappi.tenzi.ListviewObjects;
 import com.wappi.tenzi.MainActivity;
 import com.wappi.tenzi.R;
+import com.wappi.tenzi.SelectionGridActivity;
+
+import java.util.ArrayList;
 
 import customViews.TouchFeedbackEnabledRelativeLayout;
 
@@ -17,19 +22,14 @@ import customViews.TouchFeedbackEnabledRelativeLayout;
  */
 public class gridItemAdapter  extends BaseAdapter {
     private Context context;
-    private final String[] mobileValues;
-    private int count = 1;
-    private int[] item_number;
+    private final ArrayList<ListviewObjects> mobileValues;
 
-    public gridItemAdapter(Context context, String[] list) {
+    public gridItemAdapter(Context context, ArrayList<ListviewObjects> list) {
         this.context = context;
         this.mobileValues = list;
-        item_number = new int[list.length];
     }
 
-    public View getView(final int position, View convertView, ViewGroup parent) {
-
-        count = position+1;
+    public View getView( int position, View convertView, ViewGroup parent) {
 
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -46,17 +46,19 @@ public class gridItemAdapter  extends BaseAdapter {
 
         TextView numbr = (TextView)gridView.findViewById(R.id.grid_number);
         //numbr.setTypeface(MainActivity.Rosario_Regular);
-        numbr.setText(position+1+"");
+        numbr.setText(mobileValues.get(position).getObjectPosition()+1+"");
 
         TextView title = (TextView)gridView.findViewById(R.id.song_hint);
-        title.setText(mobileValues[position]);
+        title.setText(mobileValues.get(position).getTitle());
 
         return gridView;
     }
 
     @Override
     public int getCount() {
-        return mobileValues.length;
+        int arrayLength = 0;
+        arrayLength = mobileValues.size();
+        return arrayLength;
     }
 
     @Override

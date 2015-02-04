@@ -12,7 +12,7 @@
 
             <stroke
                 android:width="3px"
-                android:color="#7cb342" />
+                android:color="@color/card_border" />
 
             <padding
                 android:bottom="4dp"

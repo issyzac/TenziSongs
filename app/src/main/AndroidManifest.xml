@@ -7,8 +7,8 @@
         android:targetSdkVersion="19" />
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:theme="@style/Theme.MyAppTheme" >
+        android:icon="@drawable/search_white"
+        android:theme="@style/Theme.MyAppTheme">
         <activity
             android:name="com.wappi.tenzi.MainActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -23,9 +23,17 @@
             android:icon="@null"
             android:parentActivityName=".MainActivity"/>
 
-        <activity android:name=".SelectionGridActivity"
-            android:theme="@android:style/Theme.Dialog"/>
+        <activity
+            android:label="Search"
+            android:name=".SelectionGridActivity"
+            android:parentActivityName=".MainActivity"
+            android:logo="@null"
+            android:windowSoftInputMode="stateAlwaysVisible"/>
 
+        <activity android:name=".BiggerAdsActivity"
+            android:icon="@null"
+            android:parentActivityName=".MainActivity"
+            />
     </application>
 
 </manifest>

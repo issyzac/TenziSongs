@@ -1,6 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/launcher"
-        android:icon="@android:drawable/ic_dialog_dialer"
+    <item
+        android:id="@+id/launcher"
+        android:icon="@drawable/search"
         android:title="select"
+
         android:showAsAction="always"/>
+
+    <item
+        android:id="@+id/empty"
+        android:title="About"
+        android:showAsAction="never"
+        />
 </menu>

@@ -58,14 +58,18 @@ public class ListViewAdapter extends ArrayAdapter<ListViewItem> {
             }
 
             TextView textView = (TextView) convertView.findViewById(R.id.words);
+
              viewHolder = new ViewHolder(textView);
 
             if(listViewItemType == TYPE_CHORUS){
-                //textView.setTypeface(MainActivity.Rosario_Italic);
+                //textView.setTypeface(MainActivity.Rosariio_Italic);
+                textView.setTypeface(MainActivity.Rosario_Italic);
             }
 
             if(listViewItemType == TYPE_VERSE){
+                textView.setTypeface(MainActivity.Rosario_Bold);
                 TextView v_number = (TextView)convertView.findViewById(R.id.verse_number);
+
                 v_number.setText(no+"");
                 //textView.setTypeface(MainActivity.Rosario_Regular);
             }

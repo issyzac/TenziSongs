@@ -5,12 +5,12 @@
         <item>Twamsifu Mungu</item>
         <item>Hata Ndimi Elfu</item>
         <item>Jina la Yesu, Salamu!</item>
-        <item>jina lake Yesu tamu</item>
+        <item>Jina lake Yesu tamu</item>
         <item>Baba, Mwana, Roho</item>
         <item>Ni tabibu wa karibu</item>
         <item>Taji Mvikeni</item>
         <item>Yesu kwetu ni rafiki</item>
-        <item>Usinipite</item>
+        <item>Usinipite!</item>
         <item>Nina haja nawe</item>
         <item>Ewe roho wa mbinguni</item>
         <item>Tafuta daima utakatifu</item>
@@ -21,6 +21,52 @@
         <item>Akifa Yesu nikafa naye</item>
         <item>Ndiyo dhamana, Yesu wangu</item>
         <item>Ninaye rafiki naye</item>
+    </string-array>
+
+    <string-array name="english_titles">
+        <item>Precious Saviour</item>
+        <item>We Praise Thee, O God</item>
+        <item>O For A Thousand Tongues To Sing</item>
+        <item>All Hail The Power Of Jesus\' Name</item>
+        <item>How Sweet The Name Of JEsus Sounds</item>
+        <item>Holly Holly Holly, Lord God Almighty</item>
+        <item>The Great Physician Now Is Near</item>
+        <item>Crown Him With Many Crowns</item>
+        <item>What A friend We Have In Jesus</item>
+        <item>Pass Me Not!</item>
+        <item>I Need Thee Every Hour</item>
+        <item>Spirit Devine Attend Our Prayers</item>
+        <item>Take Time To Be Holly</item>
+        <item>My Faith Looks Up To Thee</item>
+        <item>My Hope Is Built On Nothing Less</item>
+        <item>Tis So Sweet To Trust In Jesus</item>
+        <item>When We Walk With The Lord</item>
+        <item>Dying With Jesus, By death Reckoned Mine</item>
+        <item>Blessed Assurance, Jesus Is Mine</item>
+        <item>I\'ve Found A Friend, Oh Such A Friend</item>
+    </string-array>
+
+    <string-array name="song_references">
+        <item>S.S 629</item>
+        <item>N.K 27    C.S.S.H 420   R. 36</item>
+        <item>N.S 520   C.H 371   G.B 16   R. 936</item>
+        <item>N.S 507   C.H 66   S.S 203   H.C 562</item>
+        <item>N.S 339   C.H 81    H.C 318</item>
+        <item>N.S 1     C.H 28    S.S 22    R. 25</item>
+        <item>N.S 256   S.M.H 182   S.S 89   R.291</item>
+        <item>N.S 185   C.H 141   G.B 2</item>
+        <item>N.S 239   C.H 226   S.S 319   R.559</item>
+        <item>N.K 88    C.H 353   S.S 488   R. 280</item>
+        <item>N.S 316   C.H 354   S.S 577   R. 568</item>
+        <item>N.S 210   N.S 562   R. 544</item>
+        <item>N.K 28    L.S 177   S.S 608</item>
+        <item>N.S 301   C.H 389   S.S 235   R. 580</item>
+        <item>N.S 288   C.H 251   S.S 902   R.  420</item>
+        <item>N.K 65    L.S 216   R.  426</item>
+        <item>N.K 40    N.S 385   L.S 211   S.S 642   R. 456</item>
+        <item>N.S 354   L.S 192   S.S 615</item>
+        <item>N.S 312   C.H 398   S.S 873   R. 417</item>
+        <item>N.S 314   C.H 276   S.S 871</item>
     </string-array>
 
 

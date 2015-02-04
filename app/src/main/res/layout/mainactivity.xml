@@ -3,7 +3,8 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff2f2f2">
+    android:background="#ffe0e0e0">
+
 
     <!-- The main content view -->
 
@@ -13,12 +14,11 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:divider="#fff2f2f2"
+            android:divider="#ffe0e0e0"
             android:dividerHeight="8dp"
             android:layout_marginRight="8dp"
             android:paddingBottom="4dp"
-            android:paddingTop="8dp"
-            android:background="#fff2f2f2"
+            android:background="#ffe0e0e0"
             android:scrollbars="none"/>
 
 

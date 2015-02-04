@@ -2,7 +2,9 @@ package adapter;
 
 import android.content.Context;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
+import android.provider.Settings;
 import android.support.v4.view.PagerAdapter;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,6 +15,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.wappi.tenzi.ListViewItem;
+import com.wappi.tenzi.ListviewObjects;
+import com.wappi.tenzi.MainActivity;
 import com.wappi.tenzi.R;
 import com.wappi.tenzi.SongDetails;
 
@@ -23,32 +27,24 @@ import java.util.List;
  */
 public class MyPagerAdapter extends PagerAdapter {
 
-    public String[] mobileValues;
     private Context context;
     public ListView listView;
-    private List<String[]> myStanza;
-    private List<String[]> myStanzaDesc;
     private  String[] mStanzas;
     private  String[] mStanzasDesc;
 
-    /*
-    For sound
-     */
-    private SoundPool soundPool;
-    private int soundID;
-    private boolean loaded = false;
+    public  MediaPlayer mediaPlayer;
+
+    public ListviewObjects[] songList;
 
 
-    public MyPagerAdapter(Context mContext, String[] values, List<String[]> stanzas , List<String[]> stanzaTags){
+    public MyPagerAdapter(Context mContext,  ListviewObjects[] song){
         context = mContext;
-        mobileValues = values;
-        myStanza = stanzaTags;
-        myStanzaDesc = stanzas;
+        songList = song;
     }
 
     @Override
     public int getCount() {
-        return mobileValues.length;
+        return songList.length;
     }
 
     @Override
@@ -59,26 +55,12 @@ public class MyPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
-        mStanzas = myStanza.get(position);
-        mStanzasDesc = myStanzaDesc.get(position);
+        mStanzas = songList[position].getStanzatag();
+        mStanzasDesc = songList[position].getStanza();
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View v = inflater.inflate(R.layout.song, container, false);
-
-        /**
-         * Sound playing codes
-         */
-        // Load the sound First
-        soundPool = new SoundPool(30, AudioManager.STREAM_MUSIC, 0);
-        soundPool.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
-            @Override
-            public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
-                SongDetails.loaded = true;
-            }
-        });
-        soundID = soundPool.load(context, R.raw.myhope, 1);
-
 
         listView = (ListView) v.findViewById(R.id.song_lyrics_list);
 
@@ -92,13 +74,19 @@ public class MyPagerAdapter extends PagerAdapter {
             }
         }
 
-        ViewGroup header = (ViewGroup) inflater.inflate(R.layout.song_header, listView,
-                false);
+        ViewGroup header = (ViewGroup) inflater.inflate(R.layout.song_header, listView, false);
+
         TextView titleText = (TextView)header.findViewById(R.id.song_title);
         TextView namba = (TextView)header.findViewById(R.id.song_number);
-        titleText.setText(mobileValues[position]);
-        namba.setText((position+1)+". ");
+        TextView englishTitle = (TextView)header.findViewById(R.id.english_title);
+        englishTitle.setTypeface(MainActivity.Rosario_Regular);
+        TextView references = (TextView)header.findViewById(R.id.references);
+        references.setTypeface(MainActivity.Rosario_Regular);
 
+        titleText.setText(songList[position].getTitle());
+        namba.setText(1+songList[position].getObjectPosition()+" ");
+        englishTitle.setText(songList[position].getEnglishTitle());
+        references.setText(songList[position].getOtherReferences());
 
         /**
          * adding the actions to playing the audio
@@ -111,8 +99,7 @@ public class MyPagerAdapter extends PagerAdapter {
             public void onClick(View view) {
                 playedSound.setVisibility(View.GONE);
                 playSound.setVisibility(View.VISIBLE);
-                SongDetails.loaded = false;
-                soundPool.release();
+                SongDetails.stopSound();
             }
         });
 
@@ -120,26 +107,9 @@ public class MyPagerAdapter extends PagerAdapter {
         playSound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                SongDetails.loadSong(context);
                 playSound.setVisibility(View.GONE);
                 playedSound.setVisibility(View.VISIBLE);
-
-                AudioManager audioManager = (AudioManager) context.getSystemService(context.AUDIO_SERVICE);
-
-                float actualVolume = (float) audioManager
-                        .getStreamVolume(AudioManager.STREAM_MUSIC);
-
-                float maxVolume = (float) audioManager
-                        .getStreamMaxVolume(AudioManager.STREAM_MUSIC);
-
-                float volume = actualVolume / maxVolume;
-                // Is the sound loaded already?
-
-                if (SongDetails.loaded) {
-                    soundPool.play(soundID, volume, volume, 1, 0, 1f);
-                    Log.e("Test", "Played sound");
-                    soundPool.release();
-                }
 
             }
         });

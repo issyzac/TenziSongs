@@ -10,6 +10,7 @@
         android:id="@+id/grid_number"
         android:layout_centerInParent="true"
         android:textSize="12sp"
+        android:textStyle="bold"
         android:gravity="center"
         android:background="@drawable/white_number"
         android:textColor="#ffffff"
@@ -22,12 +23,13 @@
         android:layout_below="@id/grid_number"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:maxWidth="70dp"
+        android:maxWidth="120dp"
+        android:textStyle="bold"
         android:minWidth="60dp"
-        android:maxLines="1"
+        android:maxLines="2"
         android:text="Chakutumaini sina"
-        android:textSize="10sp"
-        android:textColor="#006600"
+        android:textSize="12sp"
+        android:textColor="@color/card_grid_text"
         android:ellipsize="end" />
 
 </RelativeLayout>

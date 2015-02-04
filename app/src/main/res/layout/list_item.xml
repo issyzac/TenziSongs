@@ -9,15 +9,17 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#fff2f2f2">
+        android:background="#ffe0e0e0">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/card">
+            android:background="@drawable/moview_card">
 
             <RelativeLayout
-                android:layout_marginTop="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:id="@+id/item_title_wrap"
                 android:layout_height="wrap_content">
@@ -28,7 +30,7 @@
                     android:id="@+id/song_number"
                     android:text="15"
                     android:textStyle="bold"
-                    android:textColor="#ff838383"
+                    android:textColor="@color/card_light_text"
                     android:textSize="14sp"
                     android:layout_centerVertical="true"
                     android:gravity="center"
@@ -43,23 +45,26 @@
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@id/song_number"
                     android:layout_marginTop="8dp"
-                    android:textColor="#006600"
+                    android:textColor="@color/amber_600"
                     android:id="@+id/item_title"
-                    android:textSize="18sp"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
                     android:text="Chakutumainin Sina"/>
 
 
             </RelativeLayout>
 
             <View
+                android:visibility="gone"
                 android:layout_width="match_parent"
-                android:layout_height="0.01dp"
+                android:layout_height="1dp"
                 android:layout_below="@id/item_title_wrap"
                 android:id="@+id/title_strip"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="8dp"
-                android:background="#aeea00"/>
+                android:background="@color/card_border"/>
 
             <View
                 android:layout_width="0dp"
@@ -71,33 +76,35 @@
             <RelativeLayout
                 android:layout_centerVertical="true"
                 android:layout_width="wrap_content"
-                android:layout_height="70dp"
+                android:layout_height="85dp"
                 android:layout_toRightOf="@id/nothing"
                 android:id="@+id/song_small_details"
                 android:layout_below="@id/title_strip"
                 android:layout_marginTop="8dp"
-                android:layout_marginLeft="8dp">
+                android:layout_marginLeft="16dp">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/the_hint"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="40dp"
+                    android:maxLines="4"
+                    android:maxWidth="200dp"
+                    android:textColor="@color/card_grid_tex"
+                    android:text="My Hope Is Built On Nothing Less \n I an in your dept forever \n make me yours now and forever\nand forever"
+                    android:ellipsize="end" />
 
                 <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="32dp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:id="@+id/music"
                     android:src="@drawable/ic_note"/>
-
-                <TextView
-                    android:layout_toRightOf="@id/music"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/english_title"
-                    android:textSize="12sp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:maxLines="3"
-                    android:maxWidth="200dp"
-                    android:textColor="@color/card_grid_text"
-                    android:text="My Hope Is Built On Nothing Less \n I an in your dept forever \n make me yours now and forever\nand forever"
-
-                    android:ellipsize="end" />
 
 
                 </RelativeLayout>
@@ -108,6 +115,7 @@
     </customViews.TouchFeedbackEnabledRelativeLayout>
 
     <customViews.TouchFeedbackEnabledRelativeLayout
+        android:visibility="gone"
         android:layout_width="70dp"
         android:layout_height="60dp"
         android:layout_alignParentRight="true"
@@ -116,6 +124,7 @@
         android:id="@+id/sound">
 
         <ImageView
+            android:visibility="gone"
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:id="@+id/play_sound"
